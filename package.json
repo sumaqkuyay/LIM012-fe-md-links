@@ -13,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/sumaqkuyay/LIM012-fe-md-links.git"
   },
+  "keywords": [],
   "author": "Sabina Canchumani Huaman",
   "license": "MIT",
   "bugs": {
@@ -22,7 +23,16 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import": "^2.22.0",
     "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cli-color": "^2.0.0",
+    "colors": "^1.4.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-node": "^11.1.0",
+    "fetch-mock": "^9.10.3",
+    "node-fetch": "^2.6.0"
   }
 }
