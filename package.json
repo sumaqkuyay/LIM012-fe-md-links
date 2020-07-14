@@ -20,9 +20,14 @@
     "url": "https://github.com/sumaqkuyay/LIM012-fe-md-links/issues"
   },
   "homepage": "https://github.com/sumaqkuyay/LIM012-fe-md-links#readme",
+  "bin": {
+    "md-links": "./src/cli.js"
+  },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "jest": "^26.1.0"
   },
