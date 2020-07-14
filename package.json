@@ -1,11 +1,8 @@
 {
-  "name": "lim012-fe-md-links",
-  "version": "1.0.0",
+  "name": "sabich-md-links",
+  "version": "1.0.1",
   "description": "Sabina-mdLinks creación de una herramienta (librería) usando Node.js, que lea y analice archivos en formato Markdown",
-  "main": "src/index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "lib/mdLinks.js",
   "scripts": {
     "test": "jest --coverage"
   },
@@ -13,31 +10,35 @@
     "type": "git",
     "url": "git+https://github.com/sumaqkuyay/LIM012-fe-md-links.git"
   },
-  "keywords": [],
-  "author": "Sabina Canchumani Huaman",
+  "keywords": [
+    "http",
+    "links",
+    "markdown",
+    "NodeJs"
+  ],
+  "author": {
+    "name": "Sabina Canchumani Huaman",
+    "email": "sabina.canchumani.huaman@gmail.com",
+    "url": "https://github.com/sumaqkuyay/LIM012-fe-md-links/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sumaqkuyay/LIM012-fe-md-links/issues"
   },
   "homepage": "https://github.com/sumaqkuyay/LIM012-fe-md-links#readme",
   "bin": {
-    "md-links": "./src/cli.js"
+    "md-links": "./lib/cli.js"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
-    "@typescript-eslint/parser": "^3.5.0",
-    "eslint": "^7.4.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "jest": "^26.1.0"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "fetch-mock": "^9.5.0",
+    "jest": "^25.5.2"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "cli-color": "^2.0.0",
-    "colors": "^1.4.0",
-    "eslint-plugin-jest": "^23.18.0",
-    "eslint-plugin-node": "^11.1.0",
-    "fetch-mock": "^9.10.3",
+    "chalk": "^4.0.0",
+    "marked": "^1.0.0",
     "node-fetch": "^2.6.0"
   }
 }
