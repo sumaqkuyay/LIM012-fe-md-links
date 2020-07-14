@@ -1,32 +1,32 @@
 const path = require('path');
 const chalk = require('chalk');
 
-const arrayOutput = ['archivo1.txt', 'archivo2.js', 'archivo3.html', 'archivo4.md', 'carpeta1'];
+const arrayOutput = ['file1.txt', 'file2.js', 'file3.html', 'file4.md', 'folder1'];
 
-const arrayOutputFilemd = [path.join(process.cwd(), 'test', 'test_container', 'archivo4.md'),
-  path.join(process.cwd(), 'test', 'test_container', 'carpeta1', 'archivo5.md'),
-  path.join(process.cwd(), 'test', 'test_container', 'carpeta1', 'carpeta2', 'archivo7.md')];
+const arrayOutputFilemd = [path.join(process.cwd(), 'test', 'test_container', 'file4.md'),
+  path.join(process.cwd(), 'test', 'test_container', 'folder1', 'file5.md'),
+  path.join(process.cwd(), 'test', 'test_container', 'folder1', 'folder2', 'archivo7.md')];
 
 const outputLinks = [
   {
-    file: path.join(process.cwd(), 'test', 'test_container', 'archivo4.md'),
+    file: path.join(process.cwd(), 'test', 'test_container', 'file4.md'),
     href: 'https://nodejs.org/',
     text: 'Node.js',
   }, {
-    file: path.join(process.cwd(), 'test', 'test_container', 'archivo4.md'),
+    file: path.join(process.cwd(), 'test', 'test_container', 'file4.md'),
     href: 'https://nodejs.org/pe',
     text: 'Node.js',
   }];
 
 const linksOutput = [
   {
-    file: path.join(process.cwd(), 'test', 'test_container', 'archivo4.md'),
+    file: path.join(process.cwd(), 'test', 'test_container', 'file4.md'),
     href: 'https://nodejs.org/',
     text: 'Node.js',
     status: 200,
     statusMessage: 'ok',
   }, {
-    file: path.join(process.cwd(), 'test', 'test_container', 'archivo4.md'),
+    file: path.join(process.cwd(), 'test', 'test_container', 'file4.md'),
     href: 'https://nodejs.org/pe',
     text: 'Node.js',
     status: 404,
@@ -39,23 +39,23 @@ const printStatsOutput = `
     `;
 
 const printLinksOutput = `
-        ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'archivo4.md')}
+        ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'file4.md')}
         ${chalk.grey('LINK:')} https://nodejs.org/
         ${chalk.grey('TEXT:')} Node.js
         
-        ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'archivo4.md')}
+        ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'file4.md')}
         ${chalk.grey('LINK:')} https://nodejs.org/pe
         ${chalk.grey('TEXT:')} Node.js
         `;
 
 const printValidateOutput = `
-          ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'archivo4.md')}
+          ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'file4.md')}
           ${chalk.grey('LINK:')} https://nodejs.org/
           ${chalk.grey('TEXT:')} Node.js
           ${chalk.cyan('STATUS_MESSAGE:')} ${chalk.bold.green('ok')}
           ${chalk.cyan('STATUS:')} 200
         
-          ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'archivo4.md')}
+          ${chalk.grey('PATH:')} ${path.join(process.cwd(), 'test', 'test_container', 'file4.md')}
           ${chalk.grey('LINK:')} https://nodejs.org/pe
           ${chalk.grey('TEXT:')} Node.js
           ${chalk.cyan('STATUS_MESSAGE:')} ${chalk.bold.red('fail')}
@@ -63,14 +63,13 @@ const printValidateOutput = `
         `;
 
 const help = `
-----------------------------Valid Arguments----------------------------
+${chalk.cyan('Correct Use:')}
 
-${chalk.yellow.inverse('Option1:')} md-links <path-to-file>
-${chalk.yellow.inverse('Option2:')} md-links <path-to-file> --validate
-${chalk.yellow.inverse('Option3:')} md-links <path-to-file> --stats
-${chalk.yellow.inverse('Option4:')} md-links <path-to-file> (--stas --validate || --validate --stas)
+${chalk.cyan('Option1:')} md-links <path-to-file>                                               returns markdown files on the specified path
+${chalk.cyan('Option2:')} md-links <path-to-file> --validate                                    returns more characteristics of markdown files
+${chalk.cyan('Option3:')} md-links <path-to-file> --stats                                       returns basic statistics of markdown files
+${chalk.cyan('Option4:')} md-links <path-to-file> --stats --validate || --validate --stats      returns more statistics of markdown files
 
-------------------------------------------------------------------------
 `;
 
 
