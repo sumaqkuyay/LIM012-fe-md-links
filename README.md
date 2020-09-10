@@ -1,4 +1,8 @@
 
+<p align="center">
+    <img src="./images/logo-mdLinks.png">
+</p>
+
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
 ligero muy popular entre developers. Es usado en muchísimas plataformas que
 manejan texto plano (GitHub, foros, blogs, ...), y es muy común
@@ -22,6 +26,56 @@ parsing,
 [markdown](https://daringfireball.net/projects/markdown/syntax), CLI,
 [npm-scripts](https://docs.npmjs.com/misc/scripts),
 [semver](https://semver.org/), ...
+
+## :white_check_mark: INSTALACIÓN
+
+**-Global**
+```js
+npm install -g sabich-md-links
+```
+
+**-Local**
+```js
+npm install sabich-md-links
+```
+
+## :white_check_mark: GUÍA DE USO
+
+### :large_blue_circle: Utilízalo como módulo:
+
+```js
+const mdLinks = require('sabich-md-links');
+```
+#### Ejemplo:
+
+```js
+const mdLinks = require("md-links");
+
+mdLinks("./some/example.md")
+  .then(links => {
+    // => [{ href, text, file }]
+  })
+  .catch(console.error);
+
+mdLinks("./some/example.md", { validate: true })
+  .then(links => {
+    // => [{ href, text, file, status, ok }]
+  })
+  .catch(console.error);
+
+mdLinks("./some/dir")
+  .then(links => {
+    // => [{ href, text, file }]
+  })
+  .catch(console.error);
+```
+## :white_check_mark: USANDO LIBRERÍA MD-LINKS DESPUÉS DE PUBLICAR EN NPM
+
+**-Instalamos el módulo dianams-md-links publicada en npm**
+
+<p align="center">
+  <img src="./images/npm-install.png">
+</p>
 
 
 ## :white_check_mark: OBJETIVOS DE APRENDIZAJE
@@ -56,5 +110,5 @@ pendientes de tu proyecto anterior.
 
 ### Buenas prácticas de desarrollo
 - [x] Modularización
-- [ ] Nomenclatura / Semántica
-- [ ] Linting
+- [x] Nomenclatura / Semántica
+- [x] Linting
