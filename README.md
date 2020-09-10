@@ -1,7 +1,10 @@
 
-<p align="center">
+<!-- <p align="center">
     <img src="./images/logo-mdLinks.png">
-</p>
+</p> -->
+
+![logo-mdLinks](https://user-images.githubusercontent.com/60890508/92719470-c9e9b700-f328-11ea-9ad6-487fafeb85e7.png)
+
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
 ligero muy popular entre developers. Es usado en muchísimas plataformas que
